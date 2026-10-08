@@ -1,0 +1,157 @@
+{
+  "spec": "0.1",
+  "specVersions": [
+    "0.1"
+  ],
+  "fileName": "ACR.md",
+  "siteUrl": "https://aicoderating.com",
+  "badgeColour": "2140B5",
+  "levels": {
+    "maintainer": [
+      {
+        "k": "A",
+        "name": "Expert",
+        "desc": "Deep experience in this language and domain. Would catch subtle bugs in review.",
+        "short": "Deep experience in this language and domain."
+      },
+      {
+        "k": "B",
+        "name": "Experienced",
+        "desc": "Works professionally in this stack. Could write the whole project unaided.",
+        "short": "Works professionally in this stack. Could write it unaided."
+      },
+      {
+        "k": "C",
+        "name": "Capable",
+        "desc": "Can read, debug and change all of the code. Needs help writing some parts.",
+        "short": "Can read, debug and change all of it. Needs help writing some parts."
+      },
+      {
+        "k": "D",
+        "name": "Learning",
+        "desc": "Understands parts of the code. Relies on AI or others for much of it.",
+        "short": "Understands parts of it. Relies on AI or others for much of it."
+      },
+      {
+        "k": "E",
+        "name": "Non-programmer",
+        "desc": "Can't read the code in a useful way. Directs the work by describing results.",
+        "short": "Can't read the code in a useful way. Describes the results wanted."
+      }
+    ],
+    "share": [
+      {
+        "k": 0,
+        "label": "None",
+        "name": "None",
+        "desc": "No code in the project was written by AI. Every line was written by people.",
+        "short": "No AI-written code."
+      },
+      {
+        "k": 1,
+        "label": "1–25%",
+        "name": "A Little",
+        "desc": "1–25% of the code. AI wrote pieces such as tests, boilerplate or single functions.",
+        "short": "1–25%. Tests, boilerplate or single functions."
+      },
+      {
+        "k": 2,
+        "label": "26–50%",
+        "name": "Some",
+        "desc": "26–50% of the code. AI wrote whole features alongside code written by people.",
+        "short": "26–50%. Whole features, alongside code by people."
+      },
+      {
+        "k": 3,
+        "label": "51–75%",
+        "name": "Most",
+        "desc": "51–75% of the code. AI wrote most features. People wrote or rewrote the rest.",
+        "short": "51–75%. AI wrote most features."
+      },
+      {
+        "k": 4,
+        "label": "76–100%",
+        "name": "Nearly All",
+        "desc": "76–100% of the code. People mostly direct and edit what AI writes.",
+        "short": "76–100%. People direct and edit what AI writes."
+      }
+    ],
+    "oversight": [
+      {
+        "k": "a",
+        "name": "Verified",
+        "desc": "Every AI change read line by line, understood and tested, like human code. Also used when AI Share is 0.",
+        "short": "Every AI change read line by line, understood and tested."
+      },
+      {
+        "k": "b",
+        "name": "Reviewed",
+        "desc": "Every AI change read by a person before merge. Tests where practical.",
+        "short": "Every AI change read by a person before merge."
+      },
+      {
+        "k": "c",
+        "name": "Spot-Checked",
+        "desc": "Some AI changes read. The rest checked by running the program or its tests.",
+        "short": "Some changes read. The rest tested by running."
+      },
+      {
+        "k": "d",
+        "name": "Tested Only",
+        "desc": "AI changes not read, but tested before merge by running the program or its tests.",
+        "short": "Not read, but tested before merge."
+      },
+      {
+        "k": "e",
+        "name": "Unchecked",
+        "desc": "Merged as generated, without being read or tested.",
+        "short": "Merged as generated."
+      }
+    ],
+    "examples": [
+      {
+        "code": "A0a",
+        "desc": "A long-running C library maintained by its original author. No AI-written code."
+      },
+      {
+        "code": "A3a",
+        "desc": "An expert uses an agent to write most of a new service, reads every diff and keeps test coverage high."
+      },
+      {
+        "code": "B1b",
+        "desc": "A team's web app. AI suggestions are accepted in places and everything goes through normal code review."
+      },
+      {
+        "code": "C3c",
+        "desc": "A hobby project. AI writes the features. The author reads the tricky parts and tests the rest by hand."
+      },
+      {
+        "code": "E4e",
+        "desc": "A weekend app built entirely by prompting. AI's changes are committed as they come, without being read or tested."
+      }
+    ],
+    "no_ai_oversight_name": "No AI Code",
+    "inconsistent": [
+      {
+        "maintainer": "E",
+        "oversight": [
+          "a",
+          "b"
+        ],
+        "reason": "At level E, the person approving merges can't read the code in a useful way, so they can't have read every AI change. If someone more experienced reviews every change, rate that person in position 1 instead."
+      },
+      {
+        "maintainer": "D",
+        "oversight": [
+          "a"
+        ],
+        "reason": "Verified means every AI change was read and understood. At level D, the person approving merges understands only parts of the code."
+      }
+    ],
+    "default": {
+      "maintainer": "A",
+      "share": 2,
+      "oversight": "b"
+    }
+  }
+}

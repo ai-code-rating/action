@@ -1,0 +1,25 @@
+name: AI Code Rating Check
+description: Checks that a repository's ACR.md follows the AI Code Rating spec.
+author: AI Code Rating
+branding:
+  icon: check-square
+  color: blue
+inputs:
+  path:
+    description: Path to the rating file, relative to the repository root.
+    required: false
+    default: ACR.md
+  fail-on-warnings:
+    description: Fail the check on warnings too, such as a rating last checked over a year ago.
+    required: false
+    default: "false"
+outputs:
+  rating:
+    description: The rating in the file, such as A2b. Empty if the rating isn't valid.
+  errors:
+    description: Number of errors found.
+  warnings:
+    description: Number of warnings found.
+runs:
+  using: node24
+  main: index.cjs
