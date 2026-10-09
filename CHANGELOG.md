@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-09: v1.0.1, Synced Wording
+
+- Re-synced `lib/` from the site, which changed punctuation in the level descriptions, an example, and a comment in the checks. Wording only: no check, level, or result changes, and all tests pass.
+- Punctuation fixes in the README and a comment in `index.cjs`.
+
 ## 2026-10-07: v1.0.0, First Release
 
 - Checks `ACR.md` against AI Code Rating spec 0.1 with the same `ACR.md` checks as the validator at aicoderating.com/validate/, copied from the site repo by its `scripts/sync-action.mjs`. The Action also checks the README badge, below.

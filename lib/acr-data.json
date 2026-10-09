@@ -23,8 +23,8 @@
       {
         "k": "C",
         "name": "Capable",
-        "desc": "Can read, debug and change all of the code. Needs help writing some parts.",
-        "short": "Can read, debug and change all of it. Needs help writing some parts."
+        "desc": "Can read, debug, and change all of the code. Needs help writing some parts.",
+        "short": "Can read, debug, and change all of it. Needs help writing some parts."
       },
       {
         "k": "D",
@@ -51,8 +51,8 @@
         "k": 1,
         "label": "1–25%",
         "name": "A Little",
-        "desc": "1–25% of the code. AI wrote pieces such as tests, boilerplate or single functions.",
-        "short": "1–25%. Tests, boilerplate or single functions."
+        "desc": "1–25% of the code. AI wrote pieces such as tests, boilerplate, or single functions.",
+        "short": "1–25%. Tests, boilerplate, or single functions."
       },
       {
         "k": 2,
@@ -80,8 +80,8 @@
       {
         "k": "a",
         "name": "Verified",
-        "desc": "Every AI change read line by line, understood and tested, like human code. Also used when AI Share is 0.",
-        "short": "Every AI change read line by line, understood and tested."
+        "desc": "Every AI change read line by line, understood, and tested, like human code. Also used when AI Share is 0.",
+        "short": "Every AI change read line by line, understood, and tested."
       },
       {
         "k": "b",
@@ -115,7 +115,7 @@
       },
       {
         "code": "A3a",
-        "desc": "An expert uses an agent to write most of a new service, reads every diff and keeps test coverage high."
+        "desc": "An expert uses an agent to write most of a new service, reads every diff, and keeps test coverage high."
       },
       {
         "code": "B1b",

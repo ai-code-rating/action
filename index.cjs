@@ -1,5 +1,5 @@
 // GitHub Action entry point. Checks ACR.md with the same checks as https://aicoderating.com/validate/
-// (lib/acr-check.cjs) and reports them as annotations on the file, a job summary and step outputs.
+// (lib/acr-check.cjs) and reports them as annotations on the file, a job summary, and step outputs.
 // No dependencies beyond lib/, so there's no build step.
 const fs = require("node:fs");
 const path = require("node:path");

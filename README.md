@@ -4,7 +4,7 @@
 
 A GitHub Action that checks a repository's `ACR.md` against the [AI Code Rating](https://aicoderating.com) spec. It runs the same checks as the [validator](https://aicoderating.com/validate/), and also checks that the README's badge matches the rating:
 
-- **Errors** fail the check: a missing or invalid rating, spec version or date, and broken front matter.
+- **Errors** fail the check: a missing or invalid rating, spec version, or date, and broken front matter.
 - **Warnings** show as notes on the file but pass: an unlikely rating, a rating last checked over a year ago, a missing plain-English paragraph, or an ACR badge in the README that shows a different rating from `ACR.md`. Set `fail-on-warnings` to make them fail too.
 
 Each problem is shown on the line of `ACR.md` it's about, in pull requests and in the run's summary.
