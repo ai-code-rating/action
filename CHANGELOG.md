@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-02: v1.0.3, js-yaml 5.5.0
+
+- Re-synced `lib/` from the site, which updated the YAML parser in `lib/js-yaml.cjs` from js-yaml 5.4.3 to 5.5.0. Only that file changed, and all tests pass.
+- One stricter behaviour: an unquoted front matter key or value that starts with `,`, `]`, or `}` (such as `rating: ]B4b`) used to load as text and is now an error, "The front matter isn't valid YAML".
+
 ## 2026-10-12: Release Steps, No Release
 
 - `CLAUDE.md`'s Releases section now lists the release steps after the commit is pushed: lightweight tags, pushing the new version tag, the force push that moves `v1` (which waits for Greg's go-ahead), and the GitHub release the Marketplace listing reads, with the changelog bullets as its notes. It also says an update to the bundled js-yaml is a new release. Docs only, so there's no new release.
